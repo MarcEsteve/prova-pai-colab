@@ -1,0 +1,26 @@
+//Error en la logica, he volgut afegir que el màxim any sigui 2026, està malament perque les restriccions han d'estar al abans de la logica.
+function funAny(n){
+    if ((n%4 === 0 && n%100 !== 0) || n%400 === 0){
+        return "Any de traspas!";
+    }else if (n>2026){
+        return "L'any no existeix"; // error
+    }else{
+        return "L'any no es de traspas!";
+    }
+}
+let n = parseInt(prompt("Introdueix un any:"));
+let resultat = funAny (n);
+alert (resultat);
+
+// Exercici nombre enter
+function parellOImparell(num) {
+  if (num % 2 === 0) {
+    return "El número és parell";
+  } else {
+    return "El número és imparell";
+  }
+}
+
+let N = parseInt(prompt("Introdueix un número enter"));
+let resultat = parellOImparell(N);
+alert(resultat);
